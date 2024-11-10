@@ -54,13 +54,14 @@ function App() {
   function defense() {
     if (enemyHealth === 0)
       return toast.error("Enemy is already dead, you will can't defense!");
-    setTimeout(() => {
-      const enemyAttackOnShield = Math.floor(Math.random() * 3) + 6;
-      setPlayerHealth((prev) => prev - enemyAttackOnShield);
-      toast.error(
-        `Your armor at 50% and enemy damaged on ${enemyAttackOnShield}`
-      );
-    }, 1000);
+
+    const enemyAttackOnShield = Math.floor(Math.random() * 3) + 6;
+    setIsPlayerShaking(true);
+    setTimeout(() => setIsPlayerShaking(false), 300);
+    setPlayerHealth((prev) => prev - enemyAttackOnShield);
+    toast.error(
+      `Your armor at 50% and enemy damaged on ${enemyAttackOnShield}`
+    );
   }
 
   function prepareForAttack() {

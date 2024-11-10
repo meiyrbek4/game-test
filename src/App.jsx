@@ -68,6 +68,8 @@ function App() {
     if (isPrepare)
       return toast.error("You can't prepare, because u are already prepare!");
 
+    if (!enemyHealth) return;
+
     setIsPrepare(true);
     setIsPlayerShaking(true);
     setTimeout(() => {

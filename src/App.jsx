@@ -60,7 +60,7 @@ function App() {
     setTimeout(() => setIsPlayerShaking(false), 300);
     setPlayerHealth((prev) => prev - enemyAttackOnShield);
     toast.error(
-      `Your armor at 50% and enemy damaged on ${enemyAttackOnShield}`
+      `Your armor at 50% and enemy damaged on ${enemyAttackOnShield} (x0.5)`
     );
   }
 
@@ -76,7 +76,7 @@ function App() {
       const enemyAttackOnShield = Math.floor(Math.random() * 6) + 24;
       setPlayerHealth((prev) => prev - enemyAttackOnShield);
       toast.error(
-        `You prepare of attack on next step. Enemy damaged you by ${enemyAttackOnShield}`
+        `You prepare of attack on next turn. Enemy damaged you by ${enemyAttackOnShield} (x2)`
       );
       setIsPlayerShaking(false);
     }, 300);

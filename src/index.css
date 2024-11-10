@@ -22,12 +22,12 @@ body {
 
 .player-container {
   
-  background-image: url("playerAnim2.gif");
+  background-image: url("../public/playerAnim.gif");
   background-size: cover;
 }
 
 .enemy-container {
-  background-image: url("enemyAnim.gif");
+  background-image: url("../public/enemyAnim.gif");
   background-size: cover;
 }
 

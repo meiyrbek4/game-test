@@ -117,6 +117,7 @@ function App() {
           Prepare Attack (x3)
         </button>
       </div>
+
       <motion.div
         className="enemy-container just-container"
         animate={{
@@ -140,10 +141,25 @@ function App() {
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className="enemy-info just-info">
-            <p>Health: {enemyHealth}</p>
-            <p>Attack: 12-15</p>
-          </div>
+          {!enemyHealth && (
+            <p
+              style={{
+                position: "relative",
+                fontSize: "50px",
+                top: -250,
+                left: 140,
+                color: "#fff",
+              }}
+            >
+              DEAD
+            </p>
+          )}
+          {enemyHealth && (
+            <div className="enemy-info just-info">
+              <p>Health: {enemyHealth}</p>
+              <p>Attack: 12-15</p>
+            </div>
+          )}
         </motion.div>
       </motion.div>
       <Toaster

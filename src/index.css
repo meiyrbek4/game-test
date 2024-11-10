@@ -34,7 +34,7 @@ body {
 .player-image{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
 
@@ -42,7 +42,7 @@ body {
 .enemy-image{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
 
@@ -63,6 +63,8 @@ body {
   box-shadow: 0 5px 15px #000;
 }
 
+
+
 .just-card{
   height: 200px;
   width: 75%;
@@ -70,22 +72,27 @@ body {
 }
 
 .just-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: auto;
-  width: 80%;
-  border: 1px solid #000;
+  width: 100%;
+  /* border: 1px solid #000; */
   border-radius: 10px;
   padding: 10px 10px;
-  background-color: rgba(0,0,0,0.3);
-  
-  margin-top: 400px;
+  /* background-color: rgba(0,0,0,0.3); */
+  /* background-color: #6f3d22d2; */
+  background-image: url("../public/textBG.png");
+  background-size: cover;
 }
 
 .just-info p{
   margin: 10px 0;
   font-family: "MedievalSharp", cursive;
   font-size: 24px;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #000;
   opacity: 1;
 }
 
@@ -117,4 +124,12 @@ body {
   background-color: #542b15;
   
   box-shadow: none;
+}
+
+.just-text {
+  position: absolute;
+  background-color: #f36161;
+  color: #fff;
+  padding: 5px 7px;
+  
 }

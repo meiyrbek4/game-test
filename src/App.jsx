@@ -3,8 +3,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
 
 function App() {
-  const [playerHealth, setPlayerHealth] = useState(100);
-  const [enemyHealth, setEnemyHealth] = useState(100);
+  const [playerHealth, setPlayerHealth] = useState(500);
+  const [enemyHealth, setEnemyHealth] = useState(500);
   const [isPrepare, setIsPrepare] = useState(false);
   const [isEnemyShaking, setIsEnemyShaking] = useState(false);
   const [isPlayerShaking, setIsPlayerShaking] = useState(false);
